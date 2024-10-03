@@ -34,7 +34,6 @@ const testimonialsData = [
   }
 ];
 
-
 const Testimonials = () => {
   return (
     <div className="testimonials-section">
