@@ -1,5 +1,5 @@
 .hero {
-  background-image: url('hero-image.jpg');
+  background-image: url('./Assets/hero-image.jpg'); /* Ensure the path is correct */
   background-size: cover;
   background-position: center;
   padding: 100px 20px;
