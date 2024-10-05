@@ -5,42 +5,42 @@ const projectsData = [
   {
     title: "Furniture Assembly",
     price: "$49",
-    image: "furniture-assembly.jpg" // Add the image path here
+    image: "./Assets/furniture-assembly.jpg"  
   },
   {
     title: "Mount Art or Shelves",
     price: "$65",
-    image: "mount-art.jpg"
+    image: "./Assets/mount-art.jpg"
   },
   {
     title: "Mount a TV",
     price: "$69",
-    image: "mount-tv.jpg"
+    image: "./Assets/mount-tv.jpg"
   },
   {
     title: "Help Moving",
     price: "$67",
-    image: "help-moving.jpg"
+    image: "./Assets/help-moving.jpg"
   },
   {
     title: "Home & Apartment Cleaning",
     price: "$49",
-    image: "cleaning.jpg"
+    image: "./Assets/cleaning.jpg"
   },
   {
     title: "Minor Plumbing Repairs",
     price: "$74",
-    image: "plumbing.jpg"
+    image: "./Assets/plumbing.jpg"
   },
   {
     title: "Electrical Help",
     price: "$69",
-    image: "electrical.jpg"
+    image: "./Assets/electrical.jpg"
   },
   {
     title: "Heavy Lifting",
     price: "$61",
-    image: "heavy-lifting.jpg"
+    image: "./Assets/heavy-lifting.jpg"
   }
 ];
 
