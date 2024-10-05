@@ -1,21 +1,19 @@
 import React from 'react';
 import './PopularProjects.css';
-
-// Import the images
-import furnitureAssembly from './Assets/furniture-assembly.jpg';
-import mountArt from './Assets/mount-art.jpg';
-import mountTv from './Assets/mount-tv.jpg';
-import helpMoving from './Assets/help-moving.jpg';
-import cleaning from './Assets/cleaning.jpg';
-import plumbing from './Assets/plumbing.jpg';
-import electrical from './Assets/electrical.jpg';
-import heavyLifting from './Assets/heavy-lifting.jpg';
+import furnitureAssembly from '../Assets/furniture-assembly.jpg';  // Adjusted path
+import mountArt from '../Assets/mount-art.jpg';
+import mountTv from '../Assets/mount-tv.jpg';
+import helpMoving from '../Assets/help-moving.jpg';
+import cleaning from '../Assets/cleaning.jpg';
+import plumbing from '../Assets/plumbing.jpg';
+import electrical from '../Assets/electrical.jpg';
+import heavyLifting from '../Assets/heavy-lifting.jpg';  // Correct path
 
 const projectsData = [
   {
     title: "Furniture Assembly",
     price: "$49",
-    image: furnitureAssembly  // Use the imported image
+    image: furnitureAssembly
   },
   {
     title: "Mount Art or Shelves",
