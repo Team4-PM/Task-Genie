@@ -4,7 +4,8 @@ import Carousel from './Carousel';
 import "./Navbar.css";
 import Facts from './Facts';
 import Features from './Features';
-import Testimonials from './Testimonials'; // Import Testimonials
+import Testimonials from './Testimonials';
+import PopularProjects from './PopularProjects'; // Import the PopularProjects component
 
 const Home = () => {
   return (
@@ -13,7 +14,8 @@ const Home = () => {
       <Carousel />
       <Facts />
       <Features />
-      <Testimonials /> {/* Add Testimonials here */}
+      <Testimonials />
+      <PopularProjects /> {/* Add the Popular Projects section */}
     </div>
   );
 }
