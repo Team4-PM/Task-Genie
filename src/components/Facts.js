@@ -4,28 +4,38 @@ import SentimentSatisfiedAltOutlinedIcon from '@mui/icons-material/SentimentSati
 import DoneAllIcon from '@mui/icons-material/DoneAll';
 import '../css/Facts.css'; // Make sure this contains animation CSS
 
-const Facts = () => {
-  const [facts, setFacts] = useState({
-    clients: 0,
-    projects: 0,
-    awards: 0,
-  });
+const useCountUp = (endValue, isVisible, duration = 1000) => {
+  const [value, setValue] = useState(0);
 
+  useEffect(() => {
+    if (isVisible) {
+      let startTime = null;
+
+      const animate = (time) => {
+        if (!startTime) startTime = time;
+        const progress = time - startTime;
+        const percentage = Math.min(progress / duration, 1); // Ensure the value stays within 0 to 1
+        setValue(Math.floor(percentage * endValue));
+
+        if (progress < duration) {
+          requestAnimationFrame(animate); // Continue until the duration is met
+        }
+      };
+
+      requestAnimationFrame(animate);
+    }
+  }, [isVisible, endValue, duration]);
+
+  return value;
+};
+
+const Facts = () => {
   const [isVisible, setIsVisible] = useState(false);
   const factsRef = useRef(null); // Ref to track the section
 
-  // Simulate fetching dynamic data
-  useEffect(() => {
-    if (isVisible) {
-      setTimeout(() => {
-        setFacts({
-          clients: 4700, // Example dynamic data
-          projects: 500,
-          awards: 15,
-        });
-      }, 1000); // Simulate delay
-    }
-  }, [isVisible]);
+  const clientsCount = useCountUp(4700, isVisible);
+  const projectsCount = useCountUp(500, isVisible);
+  const awardsCount = useCountUp(15, isVisible);
 
   // Intersection Observer to trigger animation on scroll
   useEffect(() => {
@@ -66,7 +76,7 @@ const Facts = () => {
               </div>
               <div className="ps-4">
                 <h5 className="text-white mb-0">Happy Clients</h5>
-                <h1 className="text-white mb-0">{facts.clients}</h1>
+                <h1 className="text-white mb-0">{clientsCount}</h1>
               </div>
             </div>
           </div>
@@ -87,7 +97,7 @@ const Facts = () => {
                 <h5 className="mb-0" style={{ color: 'rgba(31,84,121,255)' }}>
                   Projects Done
                 </h5>
-                <h1 className="mb-0">{facts.projects}</h1>
+                <h1 className="mb-0">{projectsCount}</h1>
               </div>
             </div>
           </div>
@@ -106,7 +116,7 @@ const Facts = () => {
               </div>
               <div className="ps-4">
                 <h5 className="text-white mb-0">Awards Won</h5>
-                <h1 className="text-white mb-0">{facts.awards}</h1>
+                <h1 className="text-white mb-0">{awardsCount}</h1>
               </div>
             </div>
           </div>

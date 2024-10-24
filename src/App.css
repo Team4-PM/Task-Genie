@@ -17,6 +17,7 @@ body {
 
 /* Navbar Styling */
 nav {
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,6 +31,7 @@ nav {
   font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 1.5px !important;
+
 }
 
 .navbar-links-container a:hover {
@@ -51,21 +53,23 @@ nav {
 
 .navbut {
   padding: 0.9rem 1.75rem;
-  background-color: white;
+  background-color: rgba(31,84,121,255);
   border: none;
-  border-radius: 5rem;
-  font-size: 1.1rem;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.2s;
+  color: white;
   border-radius: 2rem;
+  font-size: 1.0rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease; /* Smoother transition */
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .navbut:hover {
-  background-color: rgba(31,84,121,255);
-  color: white;
+  background: linear-gradient(90deg, blue, red); /* Gradient effect */
+  color: white; /* Ensures the text color stays visible */
+  box-shadow: rgba(31, 84, 121, 0.5) 0px 5px 15px; /* Adds a stronger shadow effect */
 }
+
 
 .navbar-menu-container svg {
   font-size: 1.5rem;

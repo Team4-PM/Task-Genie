@@ -4,20 +4,24 @@ import Carousel from './Carousel';
 import "./Navbar.css";
 import Facts from './Facts';
 import Features from './Features';
-import Testimonials from './Testimonials';
-import PopularProjects from './PopularProjects'; // Import the PopularProjects component
+import PopularProjects from './PopularProjects';
+import PopularServices from './PopularServices';
+import Footer from './Footer';
 
 const Home = () => {
   return (
     <div className='home-container'>
-      <Navbar />
-      <Carousel />
-      <Facts />
-      <Features />
-      <Testimonials />
-      <PopularProjects /> {/* Add the Popular Projects section */}
-    </div>
-  );
+    <Navbar />
+    <Carousel />
+    <Facts></Facts>
+    <Features /><hr></hr>
+    <PopularProjects></PopularProjects>
+    <hr></hr>
+    <PopularServices></PopularServices>
+    <Footer />
+
+  </div>
+  )
 }
 
-export default Home;
+export default Home
